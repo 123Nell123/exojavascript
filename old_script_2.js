@@ -12,7 +12,7 @@ let prenom = "kk";
 listentre= [];
 while (true){
 
-    nombre = prompt("entrez une valeur");   
+    nombre = prompt('entrez un chiffre (ou re-taper "enter" pour afficher votre resultat)');   
     
     if (nombre) {
         listentre.push(nombre) ;
@@ -20,21 +20,21 @@ while (true){
     }
 
     else {
-        console.log("break");
-        break;
+        console.log("affichage du resultat: ");
+        for(let nbre in listentre) {
+            factorielle(nombre);
+        }        
     }
-    for(let nbre in listentre) {
-        console.log(listentre[nbre]);
-    }
+
 }
  
 
-/*
+
 
 listresult= [] ;
- factorielle(1) ;
+//  factorielle(1) ;
 
- factorielle(2) ;
+//  factorielle(2) ;
  //factorielle(1) ;
  
 function factorielle(n) {
@@ -73,4 +73,4 @@ function factorielle(n) {
    }
 }
 
-*/
+

@@ -14,8 +14,16 @@ const books = [
   ];
 
   livreEmprunte1fois();
+  console.log("*".repeat(20));
   lessRented(books);
-
+  console.log("*".repeat(20));
+  mostRented(books);
+  console.log("*".repeat(20));
+  findById(books,873495);
+  console.log("*".repeat(20));
+  deleteById(books,133712)
+  console.log("*".repeat(20));
+  sortByName(books);
 
 
   function livreEmprunte1fois(){
@@ -32,27 +40,29 @@ const books = [
   }
 
   function lessRented(arr) {
-    let lessRented;
+    let mylessRented;
     let tmp=arr[0].rented;
     arr.forEach(book => {
       if (book.rented < tmp) {
         tmp = book.rented;
-        lessRented = book;
+        mylessRented = book;
       }
     })
-    return lessRented;
+    console.log(mylessRented.title);
+    return mylessRented;
   }
   
   function mostRented(arr) {
-    let mostRented;
+    let mymostRented;
     let tmp=0;
     arr.forEach(book => {
       if (book.rented > tmp) {
         tmp = book.rented;
-        mostRented = book;
+        mymostRented = book;
       }
     })
-    return mostRented;
+    console.log(mymostRented.title);
+    return mymostRented;
   }
   
   function findById(arr,id) {
@@ -62,6 +72,7 @@ const books = [
         result = book.title;
       }
     })
+    console.log(result);
     return result;
   }
   
@@ -78,5 +89,7 @@ const books = [
     let newArr = arr.sort(function (a,b) {
       return a.title == b.title ? 0 : a.title>b.title ? 1 : -1;
     });
+    newArr.forEach(book => console.log(book )
+    )
     return newArr;
   }

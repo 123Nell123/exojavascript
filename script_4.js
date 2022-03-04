@@ -25,9 +25,11 @@ const entrepreneurs = [
 
 
 annee(1970);
-
+console.log("*".repeat(20));
 nomPrenom(entrepreneurs);
+console.log("*".repeat(20));
 age(entrepreneurs);
+console.log("*".repeat(20));
 sortByLastName(entrepreneurs)
 
 function nomPrenom(malist){

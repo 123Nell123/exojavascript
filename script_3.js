@@ -11,9 +11,9 @@ nombre = prompt("combien d'etage veux tu?");
 pyramide(nombre);
 function pyramide(n) {
     i = 1;
-while (i<n)
+while (i<=n)
     {
-        let espace = ".";
+        let espace = " ";
         let diez = "#";
 
        // (n-i)fois
